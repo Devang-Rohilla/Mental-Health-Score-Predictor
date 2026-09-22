@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-mist-50 text-ink-800 font-body;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: #cfe0dd;
+  color: #16302e;
+}
+
+/* visible keyboard focus, kept subtle but never removed */
+:focus-visible {
+  outline: 2px solid #4c837d;
+  outline-offset: 2px;
+}
+
+/* number input spinner cleanup so custom styling reads cleanly */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
