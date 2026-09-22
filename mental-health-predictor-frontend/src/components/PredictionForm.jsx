@@ -19,7 +19,7 @@ import {
   STRESS_OPTIONS,
 } from "../constants/formOptions";
 
-const API_URL = "http://localhost:8000/predict";
+const API_URL = "https://mental-health-score-predictor-5ujy.onrender.com/predict";
 
 function validateStep(stepIndex, form) {
   const errors = {};
